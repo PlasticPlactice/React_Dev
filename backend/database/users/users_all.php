@@ -1,5 +1,5 @@
 <?php
-require_once 'db_connect.php';
+require_once '../db_connect.php';
 
 // ユーザー情報の全件取得
 $sql = "SELECT * FROM users";
