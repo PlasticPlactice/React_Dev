@@ -34,13 +34,13 @@ services:
     image: mysql:latest
     container_name: mysql
     environment:
+      MYSQL_DATABASE: car
       MYSQL_ROOT_PASSWORD: morijyobi
-      MYSQL_DATABASE: cars
       MYSQL_USER: user
       MYSQL_PASSWORD: morijyobi
     volumes:
-      - ./db_data:/var/lib/mysql
-      - ./backup.sql:/docker-entrypoint-initdb.d/backup.sql
+      - db_data:/var/lib/mysql
+      - ./mysql/init:/docker-entrypoint-initdb.d
     ports:
       - "3308:3306"
 
@@ -60,3 +60,6 @@ services:
 networks:
   default:
     driver: bridge
+
+volumes:
+  db_data:
