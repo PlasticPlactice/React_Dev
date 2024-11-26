@@ -7,7 +7,7 @@ if(isset($_POST['name']) && isset($_POST['email']) && isset($_POST['password']))
     $email = $_POST['email'];
     $password = $_POST['password'];
     
-    $sql = "INSERT INTO car (name, email, password) VALUES(:name, :email, :password)";
+    $sql = "INSERT INTO users (name, email, password) VALUES(:name, :email, :password)";
 
     $stm = $pdo->prepare($sql);
 
