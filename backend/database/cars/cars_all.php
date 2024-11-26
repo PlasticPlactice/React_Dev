@@ -1,6 +1,12 @@
 <?php
 require_once "../db_connect.php";
 
+$response = [
+    'status' => 'error',
+    'message' => '',
+    'data' => []
+];
+
 // 車情報の全件取得
 try{
     $sql = "SELECT * FROM cars";
@@ -10,17 +16,30 @@ try{
     
     $result = $stm->fetchAll(PDO::FETCH_ASSOC);
 
-    // 配列を作成し、json形式でデータをフロントエンドに渡す
-    echo json_encode([
-        'status' => 'success',
-        'data' => $cars
-    ]);
+    // データが存在しない場合の処理
+    if (empty($result)) {
+        $response['status'] = 'success';
+        $response['message'] = '車両情報が見つかりませんでした';
+        $response['data'] = [];
+    } else {
+        $response['status'] = 'success';
+        $response['message'] = '車両情報を取得しました';
+        $response['data'] = $result;
+    }
+    
 }catch (PDOException $e){
-    // エラーの場合
-    http_response_code(500);
-    echo json_encode([
-        'status' => 'error',
-        'message' => 'Database error: ' . $e->getMessage()
-    ]);
+    // データベースエラーの場合
+    $response['status'] = 'error';
+    $response['message'] = 'Database error: ' . $e->getMessage();
+    
+} catch (Exception $e){
+    // その他のエラーの場合
+    $response['status'] = 'error';
+    $response['message'] = $e->getMessage();
+
+} finally {
+    // JSONレスポンスを返す
+    header('Content-Type: application/json');
+    echo json_encode($response, JSON_UNESCAPED_UNICODE);
 }
 ?>
