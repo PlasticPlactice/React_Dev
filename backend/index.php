@@ -23,7 +23,7 @@ $routes = [
         echo "Welcome to the homepage!";
     },
     '#^/car/(\d+)$#' => function($id) {
-        header("Location: car_test.php?id=$id");
+        header("Location: test.php?id=$id");
         exit;
     },
     // 他のルートをここに追加
@@ -45,4 +45,10 @@ if (!$route_found) {
     http_response_code(404);
     echo "404 Not Found";
 }
+
+
+// test
+$stmt = $pdo->prepare("SELECT * FROM cars");
+$car = $stmt->execute();
+
 ?>
