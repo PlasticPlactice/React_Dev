@@ -46,7 +46,6 @@ try{
         $stm->execute();
 
         // 成功時のレスポンス
-        
         $response['status'] = 'success';
         $response['message'] = '車両情報が正常に登録されました';
         
