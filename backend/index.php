@@ -46,14 +46,4 @@ if (!$route_found) {
     echo "404 Not Found";
 }
 
-
-// test
-// $stmt = $pdo->prepare("SELECT * FROM users");
-// $stmt->execute();
-// $cars = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-// echo "<pre>";
-// var_dump($cars);
-// echo "</pre>";
-
 ?>
