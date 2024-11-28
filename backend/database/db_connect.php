@@ -13,7 +13,7 @@ $database = "car";
 $server = "mysql";
 
 //接続するための情報を組み立てる（DSN文字列）
-$dsn = "mysql:host={$server};dbname={$database};charset=utf8";
+$dsn = "mysql:host={$server};dbname={$database};charset=utf8mb4";
 
 //PDOを使ってmysqlへ接続する
 try {
@@ -23,7 +23,9 @@ try {
     $pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
     //例外をスローする
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    echo "データベースに接続しました";
+
+    $pdo->exec("SET NAMES utf8mb4");
+    // echo "データベースに接続しました";
 } catch(Exception $e) {
     echo "データベース接続エラー";
     echo $e->getMessage();
