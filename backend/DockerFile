@@ -1,7 +1,0 @@
-FROM php:8.0-fpm
-
-# 必要なPHP拡張モジュールをインストール
-RUN docker-php-ext-install mysqli pdo_mysql
-
-# 作業ディレクトリを設定
-WORKDIR /var/www/html
