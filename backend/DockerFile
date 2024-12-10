@@ -3,5 +3,11 @@ FROM php:8.0-fpm
 # 必要なPHP拡張モジュールをインストール
 RUN docker-php-ext-install mysqli pdo_mysql
 
+RUN mkdir -p /etc/mysql/conf.d/my.cnf
+
+RUN echo "[client]\ndefault-character-set=utfmb4\n\n[mysql]\ndefault-character-set=utf8mb4\n\n[mysqld]\ncharacter-set-server=utf8mb4\ncollation-server=utf8mb4_general_ci" > /etc/mysql/my.cnf
+
+RUN chmod 644 /etc/mysql/conf.d/my.cnf
+
 # 作業ディレクトリを設定
 WORKDIR /var/www/html
