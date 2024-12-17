@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 
 const Search = () => {
@@ -12,7 +13,7 @@ const Search = () => {
 
             <div className="flex items-center  w-full border border-gray-200 text-sm">
                 <button className="flex justify-around items-center p-4 border bg-white rounded-md flex-grow text-left text-sm text-black cursor-pointer hover:bg-[#FBEED2] hover:text-[#F15A22]">
-                    <img
+                    <Image
                         src="/img/search_carname.svg"
                         alt="メーカー車名"
                         width={36}
@@ -20,7 +21,7 @@ const Search = () => {
                     />
                     <span className="text-2xl">メーカー車名</span>
                     <span>を選択する</span>
-                    <img
+                    <Image
                         src="/img/ChevronRight.png"
                         alt=">"
                         width={35}
@@ -29,7 +30,7 @@ const Search = () => {
                 </button>
             
                 <button className="flex justify-around items-center p-4 border bg-white rounded-md flex-grow text-left text-sm text-black cursor-pointern hover:bg-[#FBEED2] hover:text-[#F15A22]">
-                    <img
+                    <Image
                         src="/img/search_region.svg"
                         alt="地域"
                         width={36}
@@ -37,7 +38,7 @@ const Search = () => {
                     />
                     <p className="text-2xl">地域</p>
                     <p>を選択する</p>
-                    <img
+                    <Image
                         src="/img/ChevronRight.png"
                         alt=">"
                         width={35}
@@ -46,7 +47,7 @@ const Search = () => {
                 </button>
 
                 <button className="flex justify-around items-center p-4 border bg-white rounded-md flex-grow text-left text-sm text-black cursor-pointer hover:bg-[#FBEED2] hover:text-[#F15A22]">
-                    <img
+                    <Image
                         src="/img/search_price.svg"
                         alt="価格"
                         width={36}
@@ -54,7 +55,7 @@ const Search = () => {
                     />
                     <p className="text-2xl">価格</p>
                     <p className="text-sm">を選択する</p>
-                    <img
+                    <Image
                         src="/img/ChevronRight.png"
                         alt=">"
                         width={35}
