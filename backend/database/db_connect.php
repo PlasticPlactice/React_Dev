@@ -1,6 +1,5 @@
-<!-- いじらないで！！！！！！！！！！！！！！！！！！！ -->
-
 <?php
+//いじらないでほしいです
 //PHPからMySQLデータベースサーバーへの接続
 
 //ユーザー名
@@ -13,7 +12,7 @@ $database = "car";
 $server = "mysql";
 
 //接続するための情報を組み立てる（DSN文字列）
-$dsn = "mysql:host={$server};dbname={$database};charset=utf8mb4";
+$dsn = "mysql:host={$server};dbname={$database};";
 
 //PDOを使ってmysqlへ接続する
 try {

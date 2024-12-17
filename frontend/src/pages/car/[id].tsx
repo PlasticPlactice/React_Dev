@@ -14,7 +14,7 @@ interface Car {
 
 export const getServerSideProps: GetServerSideProps = async (context: GetServerSidePropsContext) => {
     const { id } = context.params!;
-    const res = await fetch(`http://localhost:3000/api/car?id=${id}`);
+    const res = await fetch(`http://localhost:8080/car_test.php?id=${id}`);
     const car: Car = await res.json();
 
     return {
