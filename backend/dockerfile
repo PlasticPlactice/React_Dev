@@ -3,14 +3,16 @@ FROM php:8.0-fpm
 # 必要なPHP拡張モジュールをインストール
 RUN docker-php-ext-install mysqli pdo_mysql
 
+# ディレクトリの作成
 RUN mkdir -p etc/mysql/conf.d
 
+# mysql設定ファイルの作成
 RUN touch etc/mysql/conf.d/my.cnf
 
+# ローカルの設定ファイルをコンテナ側にコピー
 COPY ./conf.d/my.cnf etc/mysql/conf.d/my.cnf
 
-# COPY --chmod=644 ./conf.d/my.cnf /etc/mysql/conf.d/my.cnf
-
+# 設定ファイルのパーミッションを変更
 RUN chmod -R 644 etc/mysql/conf.d/my.cnf
 
 # 作業ディレクトリを設定

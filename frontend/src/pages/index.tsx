@@ -3,6 +3,7 @@ import Search from "@/components/search";
 import History from "@/components/history";
 import Header from "@/components/Header";
 import Bodytypesearch from "@/components/Bodytypesearch";
+import Maker from "@/components/Maker";
 
 export default function Home() {
   return (
@@ -10,7 +11,11 @@ export default function Home() {
     <Header/>
     <Search/>
     <History/>
-    <Bodytypesearch/>
+    <div className="bg-white">
+      <Maker/>
+      <Bodytypesearch/>
+      
+    </div>
     <Footer/>
     </>
   
