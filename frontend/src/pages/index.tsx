@@ -3,6 +3,7 @@ import Search from "@/components/search";
 import History from "@/components/history";
 import Header from "@/components/Header";
 import Maker from "@/components/Maker";
+import Prefectures from "@/components/prefectures";
 
 
 export default function Home() {
@@ -11,8 +12,9 @@ export default function Home() {
     <Header/>
     <Search/>
     <div className="bg-white">
-      <Maker/>
       <History/>
+      <Maker/>
+      <Prefectures/>
     </div>
     <Footer/>
     </>
