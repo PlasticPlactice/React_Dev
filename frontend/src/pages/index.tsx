@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import Bodytypesearch from "@/components/Bodytypesearch";
 import Maker from "@/components/Maker";
 import Specialconditionsearch from "@/components/Specialconditionsearch";
+import Popularkeywordsearch from "@/components/Popularkeywordsearch";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <Bodytypesearch/>
 
       <Specialconditionsearch/>
+      <Popularkeywordsearch/>
     </div>
     <Footer/>
     </>

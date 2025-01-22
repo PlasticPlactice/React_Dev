@@ -13,7 +13,7 @@ const Bodytypesearch = () => {
                 <p className="font-bold text-sm">ボディタイプから検索</p>
             </div>
             
-            <div className="border border-black  ml-36 mr-36 p-3">
+            <div className="border border-gray-200 ml-36 mr-36 p-3">
             <div className="flex">
                 <div className="w-32 h-20  text-center pt-2 hover:bg-[#FFF2E6] hover:underline cursor-pointer">
                     <div className="flex justify-center p-1">
