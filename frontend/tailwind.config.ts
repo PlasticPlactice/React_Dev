@@ -11,7 +11,11 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        'custom-color':'#f9f8f6',
       },
+      spacing:{
+        '38':'151px',
+      }
     },
   },
   plugins: [],
