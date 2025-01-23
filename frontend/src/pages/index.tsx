@@ -15,6 +15,7 @@ export default function Home() {
       <History/>
       <Maker/>
       <Prefectures/>
+
     </div>
     <Footer/>
     </>

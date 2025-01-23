@@ -11,7 +11,7 @@ import Kyusyu from "./prefectures/Kyusyu";
 const Prefectures = () => {
     return (
         <>
-        <div className="border text-blue-950 flex justify-between text-xs mx-40">
+        <div className="border text-blue-950 flex justify-between text-xs mx-38">
             <div className="p-7">
                 <Touhoku></Touhoku>
                 <Kantou></Kantou>

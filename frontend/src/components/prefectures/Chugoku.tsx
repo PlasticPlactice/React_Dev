@@ -7,11 +7,11 @@ const Chugoku = () => {
                 <li>中国</li>
             </ul>
             <ul className="flex px-2">
-                <li className="px-1">鳥取県</li>
-                <li className="px-1">島根県</li>
-                <li className="px-1">岡山県</li>
-                <li className="px-1">広島県</li>
-                <li className="px-1">山口県</li>
+                <li className="px-1">鳥取</li>
+                <li className="px-1">島根</li>
+                <li className="px-1">岡山</li>
+                <li className="px-1">広島</li>
+                <li className="px-1">山口</li>
             </ul>
         </div>
     );

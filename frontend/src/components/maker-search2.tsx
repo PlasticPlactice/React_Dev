@@ -1,46 +1,39 @@
-import Audi from "./maker2/AUDI"
-import Benz from "./maker2/BENZ"
-import Bmw from "./maker2/BMW"
-import Land_rover from "./maker2/LAND_ROVER"
-import Mini from "./maker2/MINI"
-import Peugeot from "./maker2/PEUGEOT"
-import Porsche from "./maker2/PORSCHE"
-import Volkswargen from "./maker2/VOLKSWARGEN"
-import Volvo from "./maker2/VOLVO"
-import World from "./maker2/WORLD"
+import React from "react"
+import MakeItem from "./MakeItem"
+import MakeItem_all from "./MakeItem-all"
 
 const Maker_search2 = () => {
     return(
-        <ul className="flex justify-start bg-slate-50">
+        <ul className="flex justify-start bg-white">
             <li className="w-24 h-28">
-                <World></World>
+                <MakeItem_all Title={"輸入\n中古車"} MakerName={"すべて見る"}/>
             </li>
             <li className="w-24 h-28">
-                <Benz></Benz>
+            <MakeItem MakerName={"ベンツ"} src={"img/maker/Benz.svg"} alt={"Toyota"}/>
             </li>
             <li className="w-24 h-28">
-                <Bmw></Bmw>
+            <MakeItem MakerName={"BMW"} src={"img/maker/Bmw.svg"} alt={"Toyota"}/>
             </li>
             <li className="w-24 h-28">
-                <Volkswargen></Volkswargen>
+            <MakeItem MakerName={"ワーゲン"} src={"img/maker/Toyota.svg"} alt={"Toyota"}/>    
             </li>
             <li className="w-24 h-28">
-                <Audi></Audi>
+            <MakeItem MakerName={"アウディ"} src={"img/maker/Audi.svg"} alt={"Toyota"}/>
             </li>
             <li className="w-24 h-28">
-                <Mini></Mini>
+            <MakeItem MakerName={"ミニ"} src={"img/maker/Mini.svg"} alt={"Toyota"}/>
             </li>
             <li className="w-24 h-28">
-                <Porsche></Porsche>
+            <MakeItem MakerName={"ポルシェ"} src={"img/maker/Porsche.svg"} alt={"Toyota"}/>
             </li>
             <li className="w-24 h-28">
-                <Volvo></Volvo>
+            <MakeItem MakerName={"ボルボ"} src={"img/maker/Volvo.svg"} alt={"Toyota"}/>
             </li>
             <li className="w-24 h-28">
-                <Peugeot></Peugeot>
+            <MakeItem MakerName={"プジョー"} src={"img/maker/Peugeot.svg"} alt={"Toyota"}/>
             </li>
             <li className="w-24 h-28">
-                <Land_rover></Land_rover>
+            <MakeItem MakerName={"ランド\nローバー"} src={"img/maker/Landrover.svg"} alt={"Toyota"}/>
             </li>
         </ul>
     )
