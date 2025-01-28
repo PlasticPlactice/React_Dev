@@ -34,8 +34,9 @@ $user = $result->fetch_assoc();
 // パスワード検証
 if ($user && password_verify($password, $user['password'])) {
     // ログイン成功
-    $token = bin2hex(random_bytes(32)); // セキュアなトークン生成
-    
+    // セキュアなトークン生成
+    $token = bin2hex(random_bytes(32));
+
     // トークンをデータベースに保存
     $updateStmt = $db->prepare("UPDATE users SET login_token = ? WHERE id = ?");
     $updateStmt->bind_param("si", $token, $user['id']);
@@ -50,8 +51,8 @@ if ($user && password_verify($password, $user['password'])) {
             'email' => $user['email']
         ]
     ]);
+// ログイン失敗
 } else {
-    // ログイン失敗
     http_response_code(401);
     echo json_encode([
         'success' => false,

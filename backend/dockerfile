@@ -13,7 +13,9 @@ RUN touch etc/mysql/conf.d/my.cnf
 COPY ./conf.d/my.cnf etc/mysql/conf.d/my.cnf
 
 # 設定ファイルのパーミッションを変更
-RUN chmod -R 644 etc/mysql/conf.d/my.cnf
+# RUN chmod -R 644 etc/mysql/conf.d/my.cnf
+
+COPY --chmod=644 ./conf.d/my.cnf etc/mysql/conf.d/my.cnf
 
 # 作業ディレクトリを設定
 WORKDIR /var/www/html

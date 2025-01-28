@@ -1,6 +1,9 @@
 <?php
 //いじらないでほしいです
 //PHPからMySQLデータベースサーバーへの接続
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
+header("Access-Control-Allow-Headers: Content-Type, Authorization");
 
 //ユーザー名
 $user = "root";
@@ -24,7 +27,6 @@ try {
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     $pdo->exec("SET NAMES utf8mb4");
-    // echo "データベースに接続しました";
 } catch(Exception $e) {
     echo "データベース接続エラー";
     echo $e->getMessage();
