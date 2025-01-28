@@ -13,6 +13,7 @@ const Popularkeywordsearch = ()=> {
                 <p className="font-bold text-sm">人気のキーワードから探す</p>
             </div>
 
+            <div className="pb-20">
             <div className="border border-gray-200 ml-36 py-5 mr-36">
                 <div className="">
                     <div className="flex gap-3">
@@ -27,6 +28,7 @@ const Popularkeywordsearch = ()=> {
                         <a className="text-xs text-[#2b006b] border-l border-gray-200 pl-3 hover:underline cursor-pointer">未使用車</a>
                         <a className="text-xs text-[#2b006b] border-l border-gray-200 pl-3 hover:underline cursor-pointer">福祉車両</a>
                     </div>
+                </div>
                 </div>
             </div>
         </>

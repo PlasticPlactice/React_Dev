@@ -7,6 +7,7 @@ import Maker from "@/components/Maker";
 import Prefectures from "@/components/prefectures";
 import Specialconditionsearch from "@/components/Specialconditionsearch";
 import Popularkeywordsearch from "@/components/Popularkeywordsearch";
+import Recommendedcars from "@/components/recommendedcars";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
       <Bodytypesearch/>
       <Specialconditionsearch/>
       <Popularkeywordsearch/>
+      <Recommendedcars/>
     </div>
     <Footer/>
     </>
