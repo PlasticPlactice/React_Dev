@@ -16,7 +16,7 @@ const Recommendedcars = () => {
             </div>
 
             <div className="flex">
-                <div className="ml-36 bg-[#ffffff] w-44">
+                <div className="ml-36 bg-[#ffffff] w-44 shadow-lg">
                     <Image
                     src="/img/recommendedcars/UZ0047660566_001S.JPG"
                     alt=""
@@ -53,7 +53,7 @@ const Recommendedcars = () => {
                 </div>
                 </div>
 
-                <div className="ml-6 bg-[#ffffff] w-44">
+                <div className="ml-6 bg-[#ffffff] w-44 shadow-lg">
                     <Image
                     src="/img/recommendedcars/UZ0046592248_001S.JPG"
                     alt=""
@@ -90,7 +90,7 @@ const Recommendedcars = () => {
                 </div>
                 </div>
 
-                <div className="ml-6 bg-[#ffffff] w-44">
+                <div className="ml-6 bg-[#ffffff] w-44 shadow-lg">
                     <Image
                     src="/img/recommendedcars/U00047466459_002S.JPG"
                     alt=""
@@ -127,7 +127,7 @@ const Recommendedcars = () => {
                 </div>
                 </div>
 
-                <div className="ml-6 bg-[#ffffff] w-44">
+                <div className="ml-6 bg-[#ffffff] w-44 shadow-lg">
                     <Image
                     src="/img/recommendedcars/UZ0046803352_001S.JPG"
                     alt=""
@@ -164,7 +164,7 @@ const Recommendedcars = () => {
                 </div>
                 </div>
 
-                <div className="ml-6 bg-[#ffffff] w-44">
+                <div className="ml-6 bg-[#ffffff] w-44 shadow-lg">
                     <Image
                     src="/img/recommendedcars/UZ0046811117_001S.JPG"
                     alt=""

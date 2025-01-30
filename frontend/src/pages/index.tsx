@@ -8,6 +8,7 @@ import Prefectures from "@/components/prefectures";
 import Specialconditionsearch from "@/components/Specialconditionsearch";
 import Popularkeywordsearch from "@/components/Popularkeywordsearch";
 import Recommendedcars from "@/components/recommendedcars";
+import Newusedcars from "@/components/newusedcars";
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
       <Specialconditionsearch/>
       <Popularkeywordsearch/>
       <Recommendedcars/>
+      <Newusedcars/>
     </div>
     <Footer/>
     </>
