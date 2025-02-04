@@ -85,23 +85,8 @@ const Footer: React.FC = () => {
           <div className={styles.topLink}>
             <a href="#">カーセンサーnetトップへ ▲</a>
           </div>
-          <div className={styles.footerBottom}>
-            <div className={styles.logoSection}>
-              <span className={styles.brand}>カーセンサー</span>
-              <span className={styles.copyright}>PRODUCED BY RECRUIT</span>
-            </div>
-          </div>
         </div>
       </footer>
-      <div className={styles.bottomSection}>
-        <Image
-          src="/img/logo_footer-Photoroom.png"
-          width={376}
-          height={60}
-          alt="カーセンサーdown"
-          className={styles.logo}
-        />
-      </div>
     </>
   );
 };

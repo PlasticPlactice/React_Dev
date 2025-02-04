@@ -1,4 +1,5 @@
 import Footer from "@/components/Footer";
+import Related from "@/components/Related";
 import Search from "@/components/search";
 import History from "@/components/history";
 import Header from "@/components/Header";
@@ -7,6 +8,9 @@ import Maker from "@/components/Maker";
 import Prefectures from "@/components/prefectures";
 import Specialconditionsearch from "@/components/Specialconditionsearch";
 import Popularkeywordsearch from "@/components/Popularkeywordsearch";
+import Recommendedcars from "@/components/recommendedcars";
+import Newusedcars from "@/components/newusedcars";
+import Overallpopularityranking from "@/components/Overallpopularityranking";
 
 export default function Home() {
   return (
@@ -20,8 +24,13 @@ export default function Home() {
       <Bodytypesearch/>
       <Specialconditionsearch/>
       <Popularkeywordsearch/>
+      <Recommendedcars/>
+      <Newusedcars/>
+      <Overallpopularityranking/>
     </div>
     <Footer/>
+    <Related/>
+    
     </>
   
   );
