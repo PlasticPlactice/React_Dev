@@ -80,13 +80,46 @@ INSERT INTO users(name, mail, password, is_admin) VALUES('hanako', 'hanako@mail.
 INSERT INTO users(name, mail, password, is_admin) VALUES('sachiko', 'sachiko@mail.com', 'password', 0);
 
 INSERT INTO makers(name) VALUES('suzuki');
+INSERT INTO makers(name) VALUES('toyota');
+INSERT INTO makers(name) VALUES('honda');
+INSERT INTO makers(name) VALUES('nissan');
+INSERT INTO makers(name) VALUES('mitsubishi');
+
 INSERT INTO body_types(name) VALUES('軽自動車');
+INSERT INTO body_types(name) VALUES('ミニバン');
+INSERT INTO body_types(name) VALUES('セダン');
+INSERT INTO body_types(name) VALUES('ハッチバック');
+INSERT INTO body_types(name) VALUES('クーペ');
+
 INSERT INTO fuels(name) VALUES('レギュラー');
-INSERT INTO drives(name) VALUES('４駆');
+INSERT INTO fuels(name) VALUES('ハイオク');
+INSERT INTO fuels(name) VALUES('軽油');
+
+INSERT INTO drives(name) VALUES('4駆');
+INSERT INTO drives(name) VALUES('2駆');
+
 INSERT INTO missions(name) VALUES('MT');
+INSERT INTO missions(name) VALUES('AT');
 
+INSERT INTO areas(name) VALUES('北海道');
 INSERT INTO areas(name) VALUES('東北');
-INSERT INTO prefectures(name) VALUES('岩手');
+INSERT INTO areas(name) VALUES('関東');
+INSERT INTO areas(name) VALUES('関西');
+INSERT INTO areas(name) VALUES('中国');
+INSERT INTO areas(name) VALUES('四国');
+INSERT INTO areas(name) VALUES('九州');
 
-INSERT INTO cars(name, displacements, handle, passengers, doors, maker_id, body_type_id, fuel_id, drive_id, mission_id, user_id) VALUES('ジムニー', 3000, '右', 4, 1, 1, 1, 1, 1, 1, 1);
-INSERT INTO used_cars(price, model_year, milege, repair, vehicle_inspection, date, img_url, car_id, prefectures_id, user_id) VALUES(200000, 2024, 160000, 'なし', '有', 20231126, '~~~.jpeg', 1, 1, 1);
+INSERT INTO prefectures(name) VALUES('北海道');
+INSERT INTO prefectures(name) VALUES('岩手');
+INSERT INTO prefectures(name) VALUES('東京');
+INSERT INTO prefectures(name) VALUES('大阪');
+INSERT INTO prefectures(name) VALUES('鳥取');
+INSERT INTO prefectures(name) VALUES('香川');
+INSERT INTO prefectures(name) VALUES('熊本');
+
+INSERT INTO cars(name, displacements, handle, passengers, doors, maker_id, body_type_id, fuel_id, drive_id, mission_id, user_id)
+                VALUES('ジムニー', 3000, '右', 4, 1, 1, 1, 1, 1, 1, 1);
+INSERT INTO cars(name, displacements, handle, passengers, doors, maker_id, body_type_id, fuel_id, drive_id, mission_id, user_id)
+                VALUES('アルファード', 50000, '右', 5, 1, 1, 1, 1, 1, 1, 2);
+INSERT INTO used_cars(price, model_year, milege, repair, vehicle_inspection, date, img_url, car_id, prefectures_id, user_id)
+                VALUES(200000, 2024, 160000, 'なし', '有', 20231126, '~~~.jpeg', 1, 1, 1);
