@@ -1,4 +1,4 @@
-// PHPとの接続確認用のファイルなので気にしないでください
+// // PHPとの接続確認用のファイルなので気にしないでください
 
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
@@ -45,14 +45,23 @@ export default function CarPage() {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
     const router = useRouter();
-    const { id } = router.query;
-
+   const { id, endpoint } = router.query;
+    
     useEffect(() => {
-        if (typeof id === "string") {
-            fetch(`api/car/${id}`)
-                .then((res) => {
+        if (typeof endpoint === "string") {
+            let url = `/api/car?endpoint=${endpoint}`;
+            if (typeof id === "string" && !isNaN(Number(id))) {
+                url += `&id=${id}`;
+            }
+
+            console.log(url);
+            fetch(url)
+                .then(async (res) => {
+                    console.log(res.status);
                     if (!res.ok) {
-                        throw new Error(`HTTP error! status: ${res.status}`);
+                        const errData = await res.json();
+                        console.error("Error Data:", errData);
+                        throw new Error(`HTTP error! status: ${res.status}, message: ${errData.error}`);
                     }
                     return res.json() as Promise<ApiResponse>;
                 })
@@ -71,7 +80,7 @@ export default function CarPage() {
                     setLoading(false);
                 });
         }
-    }, [id]);
+    }, [id, endpoint]);
 
     if (loading) {
         return <div>読み込み中...</div>;

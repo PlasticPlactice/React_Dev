@@ -1,18 +1,11 @@
 <?php
-// 動的ルーティングを採用したいページ
-// users{id}
-// cars{id}
-// /cars?maker=""
-// /cars?carName=""
-// /cars?region=""
-// /cars?fee=""
-// /favorites{id}
-// /cars/ranks{id}
-
 require_once "./database/db_connect.php";
 
 // リクエストされたURLのパスを取得
 $request = $_SERVER['REQUEST_URI'];
+
+// クエリパラメータを取得
+$query = $_SERVER['QUERY_STRING'];
 
 // クエリパラメータを取り除く
 $request = parse_url($request, PHP_URL_PATH);
@@ -26,6 +19,15 @@ $routes = [
         header("Location: car_test.php?id=$id");
         exit;
     },
+    '#^/cars$#' => function() {
+        header("Location: cars_all.php");
+        exit;
+    },
+    '#^/api/(\w+)$#' => function($endpoint) use ($query) {
+        header("Location: $endpoint.php?$query");
+        exit;
+},
+
     // 他のルートをここに追加
 ];
 
@@ -40,10 +42,7 @@ foreach ($routes as $pattern => $callback) {
     }
 }
 
-// ルートが見つからない場合
 if (!$route_found) {
     http_response_code(404);
     echo "404 Not Found";
 }
-
-?>
