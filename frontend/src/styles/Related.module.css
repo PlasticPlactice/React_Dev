@@ -85,7 +85,7 @@
 .bottomSection {
   margin-left: 120px; /* 左の余白を120pxに設定 */
   position: relative; /* 相対位置を使用 */
-  top: -45px;  /* 上に20px移動 */
+  top: -45px;
 }
 
 
