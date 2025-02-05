@@ -11,6 +11,7 @@ import Popularkeywordsearch from "@/components/Popularkeywordsearch";
 import Recommendedcars from "@/components/recommendedcars";
 import Newusedcars from "@/components/newusedcars";
 import Overallpopularityranking from "@/components/Overallpopularityranking";
+import Popularityrankingbytype from "@/components/Popularityrankingbytype";
 
 export default function Home() {
   return (
@@ -27,6 +28,7 @@ export default function Home() {
       <Recommendedcars/>
       <Newusedcars/>
       <Overallpopularityranking/>
+      <Popularityrankingbytype/>
     </div>
     <Footer/>
     <Related/>
