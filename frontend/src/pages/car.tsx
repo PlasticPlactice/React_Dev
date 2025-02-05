@@ -1,3 +1,6 @@
+
+// // PHPとの接続確認用のファイルなので気にしないでください
+
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 
@@ -53,8 +56,8 @@ export default function CarPage() {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
     const router = useRouter();
-    const { id, endpoint } = router.query;
 
+    const { id, endpoint } = router.query;
     useEffect(() => {
         if (typeof endpoint === "string") {
             let url = `/api/car?endpoint=${endpoint}`;

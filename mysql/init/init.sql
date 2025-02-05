@@ -79,6 +79,7 @@ INSERT INTO users(name, mail, password, is_admin) VALUES('taro', 'taro@mail.com'
 INSERT INTO users(name, mail, password, is_admin) VALUES('hanako', 'hanako@mail.com', 'qwert', 1);
 INSERT INTO users(name, mail, password, is_admin) VALUES('sachiko', 'sachiko@mail.com', 'password', 0);
 
+
 INSERT INTO makers(name) VALUES('レクサス');
 INSERT INTO makers(name) VALUES('トヨタ');
 INSERT INTO makers(name) VALUES('ホンダ');
@@ -119,6 +120,7 @@ INSERT INTO areas(name) VALUES('北海道');
 INSERT INTO areas(name) VALUES('東北');
 INSERT INTO areas(name) VALUES('関東');
 INSERT INTO areas(name) VALUES('関西');
+
 INSERT INTO areas(name) VALUES('四国');
 INSERT INTO areas(name) VALUES('北陸');
 INSERT INTO areas(name) VALUES('甲信越');

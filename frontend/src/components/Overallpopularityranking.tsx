@@ -4,7 +4,7 @@ import Image from "next/image";
 const Overallpopularityranking = () => {
     return (
         <>
-        <div className="bg-[#f5f4f0] pb-7">
+        <div className="bg-[#f5f4f0]">
             <div className="flex ml-36 py-6 pt-0">
                 <Image
                 src="/img/icon_meter (1).svg"
