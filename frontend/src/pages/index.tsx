@@ -9,6 +9,7 @@ import Prefectures from "@/components/prefectures";
 import Specialconditionsearch from "@/components/Specialconditionsearch";
 import Popularkeywordsearch from "@/components/Popularkeywordsearch";
 import Recommendedcars from "@/components/recommendedcars";
+import Othercontent from "@/components/Othercontent";
 import Newusedcars from "@/components/newusedcars";
 import Overallpopularityranking from "@/components/Overallpopularityranking";
 import Popularityrankingbytype from "@/components/Popularityrankingbytype";
@@ -35,6 +36,7 @@ export default function Home() {
       <Usedcardealership2/>
       <Prefectures/>
     </div>
+    <Othercontent/>
     <Footer/>
     <Related/>
     
