@@ -9,7 +9,7 @@ $response = [
 
 // 車情報の全件取得
 try{
-    $sql = "SELECT * FROM cars";
+    $sql = "SELECT * FROM used_cars";
     $stm = $pdo->prepare($sql);
     // SQL実行
     $stm->execute();

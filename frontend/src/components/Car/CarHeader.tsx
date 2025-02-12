@@ -11,21 +11,23 @@ type Props = {
     year : number,
     year2 : number,
     mirage : number,
-    syaken : number,
+    syaken : string,
     repair : string,
     hosyou : string,
     maintenance : string,
     displacement : number,
     mission : string,
+    body_type : string,
 }
 const CarHeader: FC<Props> = ({src, alt, maker, car_name, money_all, money, 
-        year,year2, mirage, syaken, repair, hosyou, maintenance, displacement, mission}) => {
+        year,year2, mirage, syaken, repair, hosyou, maintenance, displacement, mission, body_type}) => {
     return ( 
         <div className="flex justify-start">
             <div className="w-264 py-6 pr-5">
-                <Image src={src} alt={alt} width={240} height={180} />
+                {/* <Image src={src} alt={alt} width={240} height={180} /> */}
+                <img src={src} alt={alt} width={240} height={180} />
                 <div className="flex justify-around text-xs">
-                    <p>ハッチバック</p>
+                    <p>{body_type}</p>
                     <p>銀</p>
                 </div>
                 
