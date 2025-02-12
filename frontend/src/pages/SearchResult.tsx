@@ -1,10 +1,14 @@
 import CarFooter from "@/components/Car/CarFooter";
 import CarHeader from "@/components/Car/CarHeader";
+import ResultSearch_sort_bar from "@/components/ResultSearch_sort_bar";
 
 const SearchResult = () => {
     return ( 
         <>
         <div className="bg-white text-black ">
+            <div className="mx-36 pt-11 w-980">
+                <ResultSearch_sort_bar/>
+            </div>
             <div className="mx-36 py-30 border-b-2">
                     <div className="">
                         <CarHeader 
