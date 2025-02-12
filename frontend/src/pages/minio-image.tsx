@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 
+
 export default function MinioImage() {
   const [imageUrl, setImageUrl] = useState<string | null>(null);
 
@@ -8,7 +9,7 @@ export default function MinioImage() {
     const fetchImage = async () => {
       try {
         const response = await fetch(
-          `/api/get-image?bucket=images&fileName=U00047567457_002L.jpg`
+          `/api/get-image?bucket=images&fileName=Jimney.jpg`
         );
         const data = await response.json();
         if (data.url) {
