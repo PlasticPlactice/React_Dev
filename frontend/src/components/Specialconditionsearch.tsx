@@ -8,8 +8,8 @@ const Specialconditionsearch = () => {
                 <Image
                 src="/img/Bodytype.svg"
                 alt=""
-                width={20}
-                height={20}/>
+                width={10}
+                height={10}/>
                 <p className="font-bold text-sm">こだわり条件から探す</p>
             </div>
 

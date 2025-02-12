@@ -8,8 +8,8 @@ const Bodytypesearch = () => {
                 <Image
                     src="/img/Bodytype.svg"
                     alt=""
-                    width={20}
-                    height={20}/>
+                    width={10}
+                    height={10}/>
                 <p className="font-bold text-sm">ボディタイプから検索</p>
             </div>
             
@@ -24,7 +24,7 @@ const Bodytypesearch = () => {
                             height={50}
                         />
                     </div>
-                        <a className="text-xs text-[#2b006b]">軽自動車</a>
+                        <a className="text-[10px] text-[#2b006b]">軽自動車</a>
                 </div>
 
                 <div className="w-32 h-20  text-center pt-2 hover:bg-[#FFF2E6] hover:underline cursor-pointer">
@@ -36,7 +36,7 @@ const Bodytypesearch = () => {
                             height={50}
                         />
                     </div>
-                        <a className="text-xs text-[#2b006b]">コンパクトカー</a>
+                        <a className="text-[10px] text-[#2b006b]">コンパクトカー</a>
                     </div>
 
                 <div className="w-32 h-20  text-center pt-2 hover:bg-[#FFF2E6] hover:underline cursor-pointer">
@@ -48,7 +48,7 @@ const Bodytypesearch = () => {
                             height={50}
                         />
                     </div>
-                        <a className="text-xs text-[#2b006b]">ミニバン</a>
+                        <a className="text-[10px] text-[#2b006b]">ミニバン</a>
                 </div>
 
                     
@@ -61,7 +61,7 @@ const Bodytypesearch = () => {
                             height={50}
                         />
                     </div>
-                        <a className="text-xs text-[#2b006b]">ステーションワゴン</a>
+                        <a className="text-[10px] text-[#2b006b]">ステーションワゴン</a>
                 </div>
 
                     <div className="w-32 h-20  text-center pt-2 hover:bg-[#FFF2E6] hover:underline cursor-pointer">
@@ -73,7 +73,7 @@ const Bodytypesearch = () => {
                                 height={50}
                             />
                         </div>
-                            <a className="text-xs text-[#2b006b]">SUV・クロカン</a>
+                            <a className="text-[10px] text-[#2b006b]">SUV・クロカン</a>
                     </div>
 
                     <div className="w-32 h-20  text-center pt-2 hover:bg-[#FFF2E6] hover:underline cursor-pointer">
@@ -85,7 +85,7 @@ const Bodytypesearch = () => {
                             height={50}
                         />
                     </div>
-                    <a className="text-xs text-[#2b006b]">セダン</a>
+                    <a className="text-[10px] text-[#2b006b]">セダン</a>
                 </div>
 
                     <div className="w-32 h-20  text-center pt-2 hover:bg-[#FFF2E6] hover:underline cursor-pointer">
@@ -97,7 +97,7 @@ const Bodytypesearch = () => {
                                 height={50}
                             />
                         </div>
-                        <a className="text-xs text-[#2b006b]">キャンピングカー</a>
+                        <a className="text-[10px] text-[#2b006b]">キャンピングカー</a>
                     </div>
 
                     <div className="w-32 h-20  text-center pt-2 hover:bg-[#FFF2E6] hover:underline cursor-pointer">
@@ -109,7 +109,7 @@ const Bodytypesearch = () => {
                                 height={50}
                             />
                         </div>
-                        <a className="text-xs text-[#2b006b]">クーペ</a>
+                        <a className="text-[10px] text-[#2b006b]">クーペ</a>
                     </div>   
             </div>
 
@@ -123,7 +123,7 @@ const Bodytypesearch = () => {
                             height={50}
                         />
                     </div>
-                    <a className="text-xs text-[#2b006b]">ハイブリッド</a>
+                    <a className="text-[10px] text-[#2b006b]">ハイブリッド</a>
                 </div>
 
                 <div className="w-32 h-20  text-center pt-2 hover:bg-[#FFF2E6] hover:underline cursor-pointer">
@@ -135,7 +135,7 @@ const Bodytypesearch = () => {
                             height={50}
                         />
                     </div>
-                    <a className="text-xs text-[#2b006b]">ハッチバック</a>
+                    <a className="text-[10px] text-[#2b006b]">ハッチバック</a>
                 </div>
 
                 <div className="w-32 h-20  text-center pt-2 hover:bg-[#FFF2E6] hover:underline cursor-pointer">
@@ -147,7 +147,7 @@ const Bodytypesearch = () => {
                             height={50}
                         />
                     </div>
-                    <a className="text-xs text-[#2b006b]">オープンカー</a>
+                    <a className="text-[10px] text-[#2b006b]">オープンカー</a>
                 </div>
 
                 <div className="w-32 h-20  text-center pt-2 hover:bg-[#FFF2E6] hover:underline cursor-pointer">
@@ -159,7 +159,7 @@ const Bodytypesearch = () => {
                             height={50}
                         />
                     </div>
-                    <a className="text-xs text-[#2b006b]">ピックアップトラック</a>
+                    <a className="text-[10px] text-[#2b006b]">ピックアップトラック</a>
                 </div>
 
                 <div className="w-32 h-20  text-center pt-2 hover:bg-[#FFF2E6] hover:underline cursor-pointer">
@@ -171,7 +171,7 @@ const Bodytypesearch = () => {
                             height={50}
                         />
                     </div>
-                    <a className="text-xs text-[#2b006b]">福祉車両</a>
+                    <a className="text-[10px] text-[#2b006b]">福祉車両</a>
                 </div>
 
                 <div className="w-32 h-20  text-center pt-2 hover:bg-[#FFF2E6] hover:underline cursor-pointer">
@@ -183,7 +183,7 @@ const Bodytypesearch = () => {
                             height={50}
                         />
                     </div>
-                    <a className="text-xs text-[#2b006b]">商用車・バン</a>
+                    <a className="text-[10px] text-[#2b006b]">商用車・バン</a>
                 </div>
 
                 <div className="w-32 h-20  text-center pt-2 hover:bg-[#FFF2E6] hover:underline cursor-pointer">
@@ -195,7 +195,7 @@ const Bodytypesearch = () => {
                             height={50}
                         />
                     </div>
-                    <a className="text-xs text-[#2b006b]">トラック</a>
+                    <a className="text-[10px] text-[#2b006b]">トラック</a>
                 </div>
 
                 <div className="w-32 h-20  text-center pt-7 hover:bg-[#FFF2E6] hover:underline cursor-pointer">

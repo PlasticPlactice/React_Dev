@@ -18,8 +18,8 @@ const Overallpopularityranking = () => {
                 <Image
                 src="/img/Bodytype.svg"
                 alt=""
-                width={20}
-                height={20}/>
+                width={10}
+                height={10}/>
                 <p className="font-bold text-sm">総合人気中古車両ランキング</p>
             </div>
 
