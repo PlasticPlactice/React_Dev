@@ -10,6 +10,7 @@ type Props = {
     detail : string,
 }
 
+
 const Detail:FC<Props> = ({}) => {
     return (
         <>
