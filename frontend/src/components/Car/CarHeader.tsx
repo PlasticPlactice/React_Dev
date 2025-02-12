@@ -18,9 +18,13 @@ type Props = {
     displacement : number,
     mission : string,
     body_type : string,
+    color : string
 }
 const CarHeader: FC<Props> = ({src, alt, maker, car_name, money_all, money, 
-        year,year2, mirage, syaken, repair, hosyou, maintenance, displacement, mission, body_type}) => {
+        year,year2, mirage, syaken, repair, hosyou, maintenance, displacement, mission, body_type, color}) => {
+
+    const mirageDisplay = mirage < 1000 ? `${mirage}km` : `${mirage / 10000}万km`;
+
     return ( 
         <div className="flex justify-start">
             <div className="w-264 py-6 pr-5">
@@ -28,7 +32,7 @@ const CarHeader: FC<Props> = ({src, alt, maker, car_name, money_all, money,
                 <img src={src} alt={alt} width={240} height={180} />
                 <div className="flex justify-around text-xs">
                     <p>{body_type}</p>
-                    <p>銀</p>
+                    <p>{color}</p>
                 </div>
                 
             </div>
@@ -57,7 +61,7 @@ const CarHeader: FC<Props> = ({src, alt, maker, car_name, money_all, money,
                                     </dd>
                                     <dt className="w-53 bg-custom-color text-center py-2">走行距離</dt>
                                     <dd className="py-1 w-134">
-                                        <span className="text-base font-bold ml-1">{mirage}万km</span>
+                                        <span className="text-base font-bold ml-1">{mirageDisplay}</span>
                                     </dd>
                                 </div>
                                 <div className="flex h-5 mt-1">

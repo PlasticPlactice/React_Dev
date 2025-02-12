@@ -5,7 +5,9 @@ import CarFooter from "@/components/Car/CarFooter";
 
 interface UsedCar {
   id: number;
+  car_title: string;
   car_name: string;
+  color: string;
   date: string;
   price: number;
   model_year: number;
@@ -19,6 +21,7 @@ interface UsedCar {
   mission_name: string;
   body_type_name: string;
   displacements: number;
+  price_all: number;
 }
 
 type ApiResponse = UsedCar | { error: string };
@@ -29,6 +32,8 @@ function isUsedCar(data: ApiResponse): data is UsedCar {
     data !== null &&
     "id" in data && typeof data.id === "number" &&
     "car_name" in data && typeof data.car_name === "string" &&
+    "car_title" in data && typeof data.car_title === "string" &&
+    "color" in data && typeof data.color === "string" &&
     "date" in data && typeof data.date === "string" &&
     "price" in data && typeof data.price === "number" &&
     "model_year" in data && typeof data.model_year === "number" &&
@@ -41,7 +46,8 @@ function isUsedCar(data: ApiResponse): data is UsedCar {
     "maker_name" in data && typeof data.maker_name === "string" &&
     "mission_name" in data && typeof data.mission_name === "string" &&
     "body_type_name" in data && typeof data.body_type_name === "string" &&
-    "displacements" in data && typeof data.displacements === "number"
+    "displacements" in data && typeof data.displacements === "number" &&
+    "price_all" in data && typeof data.price_all === "number"
   );
 }
 
@@ -82,11 +88,6 @@ export default function UsedCarPage() {
                 `Failed to fetch image: ${imgResponse.statusText}`
               );
             }
-            // const imgBlob = await imgResponse.blob();
-            // const imgObjectURL = URL.createObjectURL(imgBlob);
-
-            // `useState` に `blob` のURLを保存
-            // setImageSrc(imgObjectURL);
           } else {
             throw new Error("Invalid response format");
           }
@@ -112,12 +113,13 @@ export default function UsedCarPage() {
                     src={usedCar.img_url}
                     alt={""}
                     maker={usedCar.maker_name}
-                    car_name={usedCar.car_name}
-                    money_all={usedCar.price / 10000}
-                    money={(usedCar.price * 1.4) / 10000}
+                    car_name={usedCar.car_title}
+                    color={usedCar.color}
+                    money_all={usedCar.price_all / 10000}
+                    money={(usedCar.price) / 10000}
                     year={usedCar.model_year}
                     year2={99}
-                    mirage={usedCar.milege / 10000}
+                    mirage={usedCar.milege}
                     syaken={usedCar.vehicle_inspection}
                     repair={usedCar.repair}
                     hosyou={"保証付き"}
