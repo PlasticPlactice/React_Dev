@@ -9,8 +9,8 @@ const Popularityrankingbytype = () => {
                 <Image
                 src="/img/Bodytype.svg"
                 alt=""
-                width={20}
-                height={20}/>
+                width={10}
+                height={10}/>
                 <p className="font-bold text-sm">車のタイプ別人気中古車ランキング</p>
             </div>
 

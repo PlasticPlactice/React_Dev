@@ -4,8 +4,8 @@ import Image from "next/image";
 const History = () => {
     return (
         <>
-        <div className="flex justify-center">
-            <div className="bg-gray-50 w-80 h-48 p-5 border-r">
+        <div className="flex justify-center bg-[#f5f4f0] p-20">
+            <div className="bg-white w-80 h-48 p-5 border-r">
                 <div className="flex">
                     <Image
                         src="/img/history.svg"
@@ -20,7 +20,7 @@ const History = () => {
                 </div>
             </div>
 
-            <div className="bg-gray-50 w-80 h-48 p-5 border-r">
+            <div className="bg-white w-80 h-48 p-5 border-r">
                 <div className="flex">
                     <Image
                         src="/img/history.svg"
@@ -35,7 +35,7 @@ const History = () => {
                 </div>
             </div>
 
-            <div className="bg-gray-50 w-80 h-48 p-5">
+            <div className="bg-white w-80 h-48 p-5">
                 <div className="flex">
                     <Image
                         src="/img/history.svg"

@@ -8,8 +8,8 @@ const Popularkeywordsearch = ()=> {
                 <Image
                 src="/img/Bodytype.svg"
                 alt=""
-                width={20}
-                height={20}/>
+                width={10}
+                height={10}/>
                 <p className="font-bold text-sm">人気のキーワードから探す</p>
             </div>
 
