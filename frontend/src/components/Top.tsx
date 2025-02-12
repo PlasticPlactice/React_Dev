@@ -5,10 +5,10 @@ import Search from "./search";
 const Top = () => {
     return (
         <>
-            <div>
-                <section className="relative bg-orange-400 min-h-screen">
-                <section className="bg-[#FFF1E5] w-[800px] h-[600px] -skew-x-[40deg] ml-[600px]">
-                </section>
+            <div className="w-1240 overflow-hidden">
+                <section className="relative bg-orange-500 min-h-screen">
+                    <section className="bg-[#FFF1E5] w-[800px] h-[600px] -skew-x-[40deg] ml-[600px]">
+                    </section>
                 </section>
 
                 <div>
@@ -78,7 +78,7 @@ const Top = () => {
                             </form>
                         </div>
                         </div>
-                        <div className="absolute top-[500px] left-[200px]">
+                        <div className="absolute w-980 top-[500px] ">
                             <Search/>
                         </div>
                         
