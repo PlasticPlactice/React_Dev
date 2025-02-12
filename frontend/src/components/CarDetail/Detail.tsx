@@ -2,6 +2,7 @@ import { FC } from "react";
 import Detail_Title from "./Detail_Title";
 import Image from "next/image";
 import Header from "../Header";
+import Dtail_situation from "./Detail_situation";
 
 type Props = {
     price_all : number,
@@ -154,6 +155,7 @@ const Detail:FC<Props> = ({}) => {
                 </div>
             </div>
         </div>
+        <Dtail_situation/>
         </>
     );
 }
