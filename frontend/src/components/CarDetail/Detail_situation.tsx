@@ -1,7 +1,15 @@
 import React from "react";
 import Image from "next/image";
 
-const Dtail_situation = () => {
+interface Props {
+    car_name: string;
+    model_year: number;
+    milege: number;
+    repair: string;
+    vehicle_inspection: string;
+}
+
+const Dtail_situation: React.FC<Props> = ({ car_name, model_year, milege, repair, vehicle_inspection }) => {
     return(
         <>
         <div className="pb-11 pt-10">
@@ -42,7 +50,7 @@ const Dtail_situation = () => {
                 width={30}
                 height={30}/>
                 <p className="font-bold text-xl">状態</p>
-                <p className="text-[10px] pt-2">(トヨタプリウス2.0 Z 滋賀県)</p>
+                <p className="text-[10px] pt-2">{car_name}</p>
             </div>
 
             <div className="ml-32 mr-[410px] border-[3px] border-[#ebe9e4] text-[#333]">
@@ -59,7 +67,7 @@ const Dtail_situation = () => {
                                     />
                                 </span>
                             </th>
-                            <td className="w-[200px] h-[50px] border-r-[1px] border-[#ebe9e4] font-bold text-[12px] pl-5 pt-4">2024(R06)</td>
+                            <td className="w-[200px] h-[50px] border-r-[1px] border-[#ebe9e4] font-bold text-[12px] pl-5 pt-4">{model_year}</td>
                         </tr>
                     
                         <tr className="flex">
@@ -89,7 +97,7 @@ const Dtail_situation = () => {
                                     />
                                 </span>
                             </th>
-                            <td className="w-[200px] h-[50px] border-r-[1px] border-[#ebe9e4] font-bold text-[12px] pl-5 pt-4">0.5万km</td>
+                            <td className="w-[200px] h-[50px] border-r-[1px] border-[#ebe9e4] font-bold text-[12px] pl-5 pt-4">{milege / 10000}万km</td>
                         </tr>
                         <tr>
                             <th className="bg-[#f9f8f6] w-[160px] h-[50px] border-r-[1px] border-[#ebe9e4] text-[12px] font-normal pl-3">キャンピングカー</th>
@@ -109,7 +117,7 @@ const Dtail_situation = () => {
                                     />
                                 </span>
                             </th>
-                            <td className="w-[200px] h-[50px] border-r-[1px] border-[#ebe9e4] font-bold text-[12px] pl-5 pt-4">なし</td>
+                            <td className="w-[200px] h-[50px] border-r-[1px] border-[#ebe9e4] font-bold text-[12px] pl-5 pt-4">{repair}</td>
                         </tr>
                         <tr>
                             <th className="bg-[#f9f8f6] w-[160px] h-[50px] border-r-[1px] border-[#ebe9e4] text-[12px] font-normal pl-3">福祉車両</th>
@@ -234,7 +242,7 @@ const Dtail_situation = () => {
                                     />
                                 </span>
                             </th>
-                            <td className="w-[560px] h-[50px] font-bold text-[12px] pl-5 pt-4">2027(R09)年3月</td>
+                            <td className="w-[560px] h-[50px] font-bold text-[12px] pl-5 pt-4">{vehicle_inspection}</td>
                         </tr>
                     </tbody>
 
