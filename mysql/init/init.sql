@@ -60,7 +60,10 @@ CREATE TABLE cars (
 
 CREATE TABLE used_cars (
     id INT PRIMARY KEY AUTO_INCREMENT,
+    car_title VARCHAR(256),
+    color VARCHAR(64),
     price INT,
+    price_all INT,
     model_year INT,
     milege INT,
     repair VARCHAR(128),
@@ -80,58 +83,67 @@ INSERT INTO users(name, mail, password, is_admin) VALUES('hanako', 'hanako@mail.
 INSERT INTO users(name, mail, password, is_admin) VALUES('sachiko', 'sachiko@mail.com', 'password', 0);
 
 
-INSERT INTO makers(name) VALUES('レクサス');
-INSERT INTO makers(name) VALUES('トヨタ');
-INSERT INTO makers(name) VALUES('ホンダ');
-INSERT INTO makers(name) VALUES('日産');
-INSERT INTO makers(name) VALUES('スズキ');
-INSERT INTO makers(name) VALUES('ダイハツ');
-INSERT INTO makers(name) VALUES('マツダ');
-INSERT INTO makers(name) VALUES('スバル');
-INSERT INTO makers(name) VALUES('三菱');
+INSERT INTO makers(name) VALUES
+('レクサス'),
+('トヨタ'),
+('ホンダ'),
+('日産'),
+('スズキ'),
+('ダイハツ'),
+('マツダ'),
+('スバル'),
+('三菱');
 
-INSERT INTO body_types(name) VALUES('軽自動車');
-INSERT INTO body_types(name) VALUES('コンパクトカー');
-INSERT INTO body_types(name) VALUES('ミニバン');
-INSERT INTO body_types(name) VALUES('ステーションワゴン');
-INSERT INTO body_types(name) VALUES('SUV・クロカン');
-INSERT INTO body_types(name) VALUES('セダン');
-INSERT INTO body_types(name) VALUES('キャンピングカー');
-INSERT INTO body_types(name) VALUES('クーペ');
-INSERT INTO body_types(name) VALUES('ハイブリッド');
-INSERT INTO body_types(name) VALUES('ハッチバック');
-INSERT INTO body_types(name) VALUES('オープンカー');
-INSERT INTO body_types(name) VALUES('ピックアップトラック');
-INSERT INTO body_types(name) VALUES('福祉車両');
-INSERT INTO body_types(name) VALUES('商用車・バン');
-INSERT INTO body_types(name) VALUES('トラック');
+INSERT INTO body_types(name) VALUES
+('軽自動車'),
+('コンパクトカー'),
+('ミニバン'),
+('ステーションワゴン'),
+('SUV・クロカン'),
+('セダン'),
+('キャンピングカー'),
+('クーペ'),
+('ハイブリッド'),
+('ハッチバック'),
+('オープンカー'),
+('ピックアップトラック'),
+('福祉車両'),
+('商用車・バン'),
+('トラック');
 
-INSERT INTO fuels(name) VALUES('レギュラー');
-INSERT INTO fuels(name) VALUES('ハイオク');
-INSERT INTO fuels(name) VALUES('軽油');
+INSERT INTO fuels(name) VALUES
+('レギュラー'),
+('ハイオク'),
+('軽油');
 
-INSERT INTO drives(name) VALUES('4WD');
-INSERT INTO drives(name) VALUES('2WD');
+INSERT INTO drives(name) VALUES
+('4WD'),
+('2WD');
 
-INSERT INTO missions(name) VALUES('MT');
-INSERT INTO missions(name) VALUES('AT/CVT');
-INSERT INTO missions(name) VALUES('6速MT');
-INSERT INTO missions(name) VALUES('5速MT');
-INSERT INTO missions(name) VALUES('フロアMTモード付6AT');
-INSERT INTO missions(name) VALUES('CVT');
+INSERT INTO missions(name) VALUES
+('MT'),
+('AT/CVT'),
+('6速MT'),
+('5速MT'),
+('フロアMTモード付6AT'),
+('CVT'),
+('フロア4AT'),
+('フロア5MT'),
+('フロアMTモード付5MT');
 
-INSERT INTO areas(name) VALUES('北海道');
-INSERT INTO areas(name) VALUES('東北');
-INSERT INTO areas(name) VALUES('関東');
-INSERT INTO areas(name) VALUES('関西');
 
-INSERT INTO areas(name) VALUES('四国');
-INSERT INTO areas(name) VALUES('北陸');
-INSERT INTO areas(name) VALUES('甲信越');
-INSERT INTO areas(name) VALUES('東海');
-INSERT INTO areas(name) VALUES('中国');
-INSERT INTO areas(name) VALUES('九州');
-INSERT INTO areas(name) VALUES('沖縄');
+INSERT INTO areas(name) VALUES
+('北海道'),
+('東北'),
+('関東'),
+('関西'),
+('四国'),
+('北陸'),
+('甲信越'),
+('東海'),
+('中国'),
+('九州'),
+('沖縄');
 
 
 INSERT INTO prefectures(name, area_id) 
@@ -184,7 +196,9 @@ VALUES('北海道', 1),
 
 
 INSERT INTO cars(name, displacements, handle, passengers, doors, maker_id, body_type_id, fuel_id, drive_id, mission_id, user_id) VALUES
-('ジムニー', 660, '右', 4, 3, 5, 1, 1, 1, 2, 1),
+('ジムニー', 660, '右', 4, 3, 5, 5, 1, 1, 7, 1),
+('ジムニー', 660, '右', 4, 3, 5, 5, 1, 1, 8, 1),
+('ジムニー', 660, '右', 4, 3, 5, 5, 1, 1, 9, 1),
 ('アルファード', 1500, '右', 5, 5, 1, 1, 1, 1, 1, 2),
 ('プリウス', 1800, '右', 5, 5, 2, 9, 1, 2, 2, 1),
 ('カローラ', 1500, '右', 5, 4, 2, 6, 1, 2, 2, 2),
@@ -207,16 +221,16 @@ INSERT INTO cars(name, displacements, handle, passengers, doors, maker_id, body_
 ('レガシィ', 2500, '右', 5, 4, 8, 4, 2, 2, 2, 1),
 ('インプレッサ', 2000, '右', 5, 4, 8, 10, 2, 2, 1, 2);
 
-INSERT INTO used_cars(price, model_year, milege, repair, vehicle_inspection, date, img_url, car_id, prefectures_id, user_id)
-VALUES(4000000, 2024, 160000, '無', '有', 20231126, 'http://localhost:9000/images/Jimney.jpg', 1, 2, 2),
-(1500000, 2018, 30000, '無', '有', '2025-02-12', 'http://localhost:9000/images/Jimney.jpg', 1, 3, 1),
-(1200000, 2017, 45000, '無', '無', '2025-02-12', 'http://localhost:9000/images/Jimney.jpg', 1, 5, 2),
-(1800000, 2019, 25000, '無', '有', '2025-02-12', 'http://localhost:9000/images/Jimney.jpg', 1, 8, 3),
-(1000000, 2016, 60000, '有', '無', '2025-02-12', 'http://localhost:9000/images/Jimney.jpg', 1, 12, 1),
-(2000000, 2020, 15000, '無', '有', '2025-02-12', 'http://localhost:9000/images/Jimney.jpg', 1, 15, 2),
-(900000, 2015, 75000, '有', '無', '2025-02-12', 'http://localhost:9000/images/Jimney.jpg', 1, 20, 3),
-(1600000, 2018, 40000, '無', '有', '2025-02-12', 'http://localhost:9000/images/Jimney.jpg', 1, 25, 1),
-(1100000, 2016, 55000, '無', '無', '2025-02-12', 'http://localhost:9000/images/Jimney.jpg', 1, 30, 2),
-(1700000, 2019, 35000, '無', '有', '2025-02-12', 'http://localhost:9000/images/Jimney.jpg', 1, 35, 3),
-(950000, 2015, 70000, '有', '無', '2025-02-12', 'http://localhost:9000/images/Jimney.jpg', 1, 40, 1),
-(200000, 2024, 160000, '有', '無', 20231126, 'http://localhost:9000/images/Jimney.jpg', 2, 1, 1);
+INSERT INTO used_cars(car_title, color, price, price_all, model_year, milege, repair, vehicle_inspection, date, img_url, car_id, prefectures_id, user_id) VALUES
+("ジムニー 660 XG 4WD ターボ 4WD AT ナビ フルセグTV Bカメラ", "白", 668000, 758000, 2017, 113000, 'なし', '車検整備付', '2025-02-12', 'http://localhost:9000/images/Jimney.jpg', 1, 3, 1),
+("ジムニー 660 XG 4WD ターボ 4WD AT ナビ フルセグTV Bカメラ", "黒M", 1448000, 1498000, 2018, 6000, 'なし', '車検整備付', 20231126, 'http://localhost:9000/images/Jimney02.jpg', 1, 2, 2),
+("ジムニー 660 ランドベンチャー 4WD 三菱認定保証　フルセグナビ　バックカメラ", "黒", 1230000, 1282000, 2017, 43000, 'なし', '2026(R08)年06月', '2025-02-12', 'http://localhost:9000/images/Jimney03.jpg', 1, 5, 2),
+("ジムニー 660 XC 4WD ターボ セーフティサポート ETC 禁煙車", "薄黄M", 2070000, 2149000, 2023, 10000, 'なし', '2026(R08)年07月', '2025-02-12', 'http://localhost:9000/images/Jimney04.jpg', 1, 8, 3),
+("ジムニー 660 XC 4WD 2トーンカラー SDナビ　1オーナー　禁煙", "薄茶", 1743000, 1849000, 2019, 45000, 'なし', '車検整備付', '2025-02-12', 'http://localhost:9000/images/Jimney05.jpg', 1, 12, 1),
+("ジムニー 660 XC 4WD 4WD 衝突軽減 LED ターボ スマートキー×2", "灰", 2240000, 2298000, 2024, 81, 'なし', '2027(R09)年11月', '2025-02-12', 'http://localhost:9000/images/Jimney06.jpg', 1, 15, 2),
+("ジムニー 660 XC 4WD スズキセーフティサポート シートヒーター", "薄茶M", 2124000, 2159000, 2023, 7000, 'なし', '2026(R08)年03月', '2025-02-12', 'http://localhost:9000/images/Jimney07.jpg', 1, 20, 3),
+("ジムニー 660 XG 4WD 社外ディスプレイオーディオ ETC", "黒真珠", 1405000, 1469000, 2020, 67000, 'なし', '2025(R07)年04月', '2025-02-12', 'http://localhost:9000/images/Jimney08.jpg', 2, 25, 1),
+("ジムニー 660 XG 4WD 衝突軽減 カーオーディオ ターボ キーレス", "白", 2019000, 2078000, 2024, 742, 'なし', '車検整備付', '2025-02-12', 'http://localhost:9000/images/Jimney09.jpg', 1, 30, 2),
+("ジムニー 660 XC 4WD 衝突軽減装置 禁煙 ディスプレイオーディオ", "緑", 2072000, 2149000, 2023, 17000, 'なし', '2026(R08)年03月', '2025-02-12', 'http://localhost:9000/images/Jimney10.jpg', 1, 35, 3),
+("ジムニー 660 XC 4WD デュアルセンサーブレーキサポート", "白", 2356000, 2398000, 2024, 75, 'なし', '2027(R09)年03月', '2025-02-12', 'http://localhost:9000/images/Jimney11.jpg', 1, 40, 1),
+("ジムニー 660 ランドベンチャー 4WD 社外ナビ BT TV 純正AW ルーフキャリア", "銀", 1298000, 1348000, 2018, 69000, 'なし', '2025(R07)年03月', 20231126, 'http://localhost:9000/images/Jimney12.jpg', 3, 1, 1);
