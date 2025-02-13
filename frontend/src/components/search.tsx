@@ -1,8 +1,14 @@
 import React from 'react';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 
 
 const Search = () => {
+    const router = useRouter();
+
+    const handleSearchClick = () => {
+        router.push('/SearchResult?endpoint=used_cars_test.php&car_id=1');
+    };
     return (
         <>
             <div className='mx-38 w-960'>
@@ -69,7 +75,7 @@ const Search = () => {
                             className='-skew-x-12'
                         />
                     </button>
-                    <button className="w-32 absolute top-0 right-0 h-full skew-x-12 origin-top-right px-4 p-6  bg-[#ff9500] text-white text-xl border-none rounded-r-md font-bold cursor-pointer whitespace-nowrap hover:bg-[#E68600]">
+                    <button onClick={handleSearchClick} className=" w-32 absolute top-0 right-0 h-full skew-x-12 origin-top-right px-4 p-6  bg-[#ff9500] text-white text-xl border-none rounded-r-md font-bold cursor-pointer whitespace-nowrap hover:bg-[#E68600]">
                         <p className='text-xl -skew-x-12'>検索する</p>
                     </button>
                     

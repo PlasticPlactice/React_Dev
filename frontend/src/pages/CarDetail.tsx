@@ -151,7 +151,7 @@ const Detail = () => {
                         </div>
                         <div className="w-280 pt-3 pb-2.5 px-4 flex justify-start bg-custom-color rounded-r-sm">
                             <div className="w-38 ">
-                                <p className="text-xs text-black">月々<span className="text-3xl text-font-custom font-bold pl-1">106,300</span>円</p>
+                                <p className="text-xs text-black">月々<span className="text-3xl text-font-custom font-bold pl-1">{usedCar.price_all / 140}</span>円</p>
                             </div>
                             <div className="w-24 flex justify-center items-center ">
                                 <Image src={""} alt={""} width={13} height={13}></Image>
