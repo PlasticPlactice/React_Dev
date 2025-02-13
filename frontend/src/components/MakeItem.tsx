@@ -22,7 +22,7 @@ const MakeItem: FC<Props> = ({src, MakerName, alt}) => {
                 </div>
                 {/* メーカー名 */}
                 <div className="w-24 h-8 py-2 bg-custom-color">
-                    <p className="text-black text-xs text-center">{MakerName}</p>
+                    <p className="text-black text-custom border-r font-bold text-center">{MakerName}</p>
                 </div>
             </a>
         </div>

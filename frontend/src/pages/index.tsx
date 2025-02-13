@@ -18,7 +18,7 @@ import Top from "@/components/Top";
 
 export default function Home() {
   return (
-    <>
+    <div className="text-black">
     <Header/>
     <Top/>
     <History/>
@@ -40,7 +40,7 @@ export default function Home() {
     <Footer/>
     <Related/>
     
-    </>
+    </div>
   
   );
 }
