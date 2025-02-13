@@ -117,6 +117,7 @@ const SearchResult = () => {
         <div className="mx-36 py-30 border-b-2">
           {usedCars.map((usedCar) => (
             <div key={usedCar.id} className="mb-10">
+              <a href={`http://localhost:3000/CarDetail?endpoint=used_cars_detail.php?id=${usedCar.id}`}>
               <CarHeader
                 src={usedCar.img_url}
                 alt={"あ"}
@@ -146,6 +147,7 @@ const SearchResult = () => {
                   reviews={66}
                 />
               </div>
+            </a>
             </div>
           ))}
         </div>
