@@ -9,13 +9,13 @@ const Maker_search2 = () => {
                 <MakeItem_all Title={"輸入\n中古車"} MakerName={"すべて見る"}/>
             </li>
             <li className="w-24 h-28">
-            <MakeItem MakerName={"ベンツ"} src={"img/maker/Benz.svg"} alt={"Toyota"}/>
+            <MakeItem MakerName={"メルセデス・ベンツ"} src={"img/maker/Benz.svg"} alt={"Toyota"}/>
             </li>
             <li className="w-24 h-28">
             <MakeItem MakerName={"BMW"} src={"img/maker/Bmw.svg"} alt={"Toyota"}/>
             </li>
             <li className="w-24 h-28">
-            <MakeItem MakerName={"ワーゲン"} src={"img/maker/Toyota.svg"} alt={"Toyota"}/>    
+            <MakeItem MakerName={"フォルクスワーゲン"} src={"/img/maker/Volkswagen.png"} alt={"Toyota"}/>    
             </li>
             <li className="w-24 h-28">
             <MakeItem MakerName={"アウディ"} src={"img/maker/Audi.svg"} alt={"Toyota"}/>
